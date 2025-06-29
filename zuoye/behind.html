@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    body{
+    background-image: url(https://img1.qunarzz.com/travel/d8/1612/73/5fc85e995c6bf2b5.jpg);
+    background-size:cover;
+  }  
+    .all{width: 80%;height:1100px;margin: 0 auto;background-color: #056dae;border:2px white solid}
+    .banner{width: 100%;height: 70px;line-height: 70px;font-size: 30px;text-align:center;border-bottom: 2px rgb(247,197,46) solid;font-weight: 1200;}
+    .left{width:25% ;background-color:RGB(248,250,247);font-family: 'Courier New', Courier, monospace;color:black;height: 1100px; float: left;border:2px white solid}
+    .content{float: right;width:74%;height: 1100px;background-color: rgb(242,242,242);border:2px white solid}
+    .content_banner{width: 100%;height:80px;background-color: whitesmoke;line-height: 80px;font-size:40px;font-style: italic;}
+    li{border: 2px rgb(250, 148, 168) solid;border-radius: 15px;background-color: rgb(220,238,191);list-style: none;cursor:pointer}
+    dd{display: none; border: 2px rgb(220,238,191) solid;border-radius: 15px;}
+    dt{ border: 2px rgb(220,238,191) solid;border-radius: 15px;}
+    dd:hover,dt:hover{background-color:darkseagreen;color:white}
+    dt,dd{height: 50px;line-height: 50px;}
+    dt{font-size: 18px;font-weight: 700;}
+    a{text-decoration: none; color:#056dae;}
+    table{width: 100%;font-size: 10pt; background-color: white;border: 2px black solid;}
+   
+    .goods_all tr,th,td{text-align: center; height: 40px; line-height: 40px;border: 0;}
+    .table{width:95%;margin: 0 auto;margin-top: 50px;}
+    #recovery,#deleteall,#deletesome,#recovery1,#deleteall1,#deletesome1{width:80px;height: 40px;background-color: #056dae; color:white;font-style: oblique;}
+     .pic{width:60px;height: 30px;overflow: hidden;}
+     .off{display: none;}
+     #off{display: none;}
+     .bottem{width: 100%;height: 90px;background-color:dimgray}
+    .bottem_content{width: 60%;height:90px;margin: auto auto;text-align: center;line-height: 45px;background-color:dimgray;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: white;font-size: smaller;}
+   
+    </style>
+    <script>
+        function selectAll(name){
+            
+            var goodsCheckbox = document.getElementsByClassName(name);
+            if(goodsCheckbox[0].checked == true){
+                for(var i=2; i<goodsCheckbox.length; i++){
+                    goodsCheckbox[i].checked = true;
+                }
+            }else{
+                for(var i=2; i<goodsCheckbox.length; i++){
+                    goodsCheckbox[i].checked = false;
+                }
+            }
+        }
+
+        function reverseSelect(name){
+            var goodsCheckbox =document.getElementsByClassName(name);
+            for(var i=2;i<goodsCheckbox.length; i++){
+                if(goodsCheckbox[i].checked == true){
+                    goodsCheckbox[i].checked = false;
+                }else{
+                    goodsCheckbox[i].checked = true;
+                }
+            }
+        }
+    </script>
+      
+</head>
+<body>
+    <div class="all">
+    <div class="left">
+        <div class="banner">后 台 管 理 系 统</div>
+   <img src="https://ts1.cn.mm.bing.net/th/id/R-C.0c5a247242b9a304debaf9451b0402ef?rik=Dw7FrjcqVuFm7g&riu=http%3a%2f%2fimg.sccnn.com%2fbimg%2f338%2f75562.jpg&ehk=fC7AXzoFkiPfuxIcGfK9s%2fsARhB0H4MoXwBRR8Ywwls%3d&risl=&pid=ImgRaw&r=0" width="100%">
+    
+        <div class="list">
+            <ul>
+                <br/>
+                
+                <li>
+                    <dl>
+                        <dt id="1">|用户管理系统</dt>
+                    </dl>
+                </li>
+                <br/>
+                <li>
+                    <dl>
+                        <dt id="2">|新闻内容管理系统</dt>
+                    </dl>
+                </li>
+                <br/>
+                <li>
+                    <dl>
+                        <dt>|评论管理系统</dt>
+                       
+                    </dl>
+                    
+                </li>
+                <br/>
+                <li>
+                    <dl>
+                        <dt>|数据分析系统</dt>
+                        <dd id="3">访问量统计<hr></dd>
+                        <dd>热门新闻分析<hr></dd>
+                        <dd>用户行为分析</dd>
+                    </dl>
+                </li>
+                <br/>
+                <li>
+                    <dl>
+                        <dt>|广告管理系统</dt>
+                        <dd>广告位设置和管理<hr></dd>
+                        <dd>广告投放统计数据<hr></dd>
+                        <dd>广告投放效果分析</dd>
+                    </dl>
+                </li>
+                <br/>
+                <li>
+                    <dl>
+                        <dt>|作者管理系统</dt>
+                        <dd>作者信息管理<hr></dd>
+                        <dd>作者稿件统计<hr></dd>
+                        <dd>作者稿费结算</dd>
+                    </dl>
+                </li>
+                <br/>
+                <li>
+                    <dl>
+                        <dt>|网站设置系统</dt>
+                        <dd>基本信息管理<hr></dd>
+                        <dd>数据备份<hr></dd>
+                        <dd>系统日志</dd>
+                    </dl>
+                </li>
+                <br/>
+            </ul>
+            <script language="JavaScript" src="jquery-3.7.1.min.js"></script>
+            <script>
+                $("#2").click(function(){
+                   
+                   var len=document.getElementsByClassName('table').length;
+                   for(i=0;i<len;i++){
+                    if(i!=1){
+                    document.getElementsByClassName('table')[i].id='off'
+                    }else{
+                        document.getElementsByClassName('table')[i].id='';
+                    }
+                  }
+                  document.getElementsByClassName('content_banner')[1].textContent="欢 迎 来 到 新 闻 内 容 管 理 系 统！"
+                })
+                $("#1").click(function(){
+                  
+                  var len=document.getElementsByClassName('table').length;
+                  for(i=0;i<len;i++){
+                   if(i!=0){
+                   document.getElementsByClassName('table')[i].id='off'
+                   }else{
+                       document.getElementsByClassName('table')[i].id='';
+                   }
+                 }
+                 document.getElementsByClassName('content_banner')[1].textContent="欢 迎 来 到 用 户 管 理 系 统！"
+               })
+               $("#3").click(function(){
+                  
+                  var len=document.getElementsByClassName('table').length;
+                  for(i=0;i<len;i++){
+                   if(i!=2){
+                   document.getElementsByClassName('table')[i].id='off'
+                   }else{
+                       document.getElementsByClassName('table')[i].id='';
+                   }
+                 }
+                 document.getElementsByClassName('content_banner')[1].textContent="欢 迎 来 到 访 问 量 统 计 系 统！"
+               })
+                
+            </script>
+        
+            <script language="JavaScript" src="jquery-3.7.1.min.js"></script>
+
+           <script>
+            $(" dt").click(function(){
+               
+                $("dd").not( $(this).siblings() ).slideUp(500);
+                
+                $(this).siblings().slideToggle(500);
+                
+            });
+        </script>
+        </div>
+
+    </div>
+    <div class="content">
+        <div class="content_banner"><img src="D:\vscode1\实训\zuoye\images\ContentBanner.png" width="100%" height="100%"></div>
+        <div class="content_banner">精 彩 赛 事，尽 在 足 球 新 闻 网 站！</div>
+        <div class="table" >
+            <input type="button" value="还原" id="recovery" ><input type="button" value="全部清空" id="deleteall" ><input type="button" value="选中清空" id="deletesome" >
+            <script language="JavaScript" src="jquery-3.7.1.min.js"></script>
+             <script>
+                 $('#recovery').click(function(){
+                    $(".tr1").removeClass('off')
+                 })
+                 $('#deleteall').click(function(){
+                    $(".tr1:gt(0)").addClass('off')
+                 })
+                 $('#deletesome').click(function(){
+                   for( var i=2;i<document.getElementsByClassName('checkbox1').length;i++){
+
+                    if(document.getElementsByClassName('checkbox1')[i].checked==true){
+                        $(".tr1:eq("+(i-1)+")").addClass('off')
+                    }
+                   }
+                 })
+             </script>
+            <table class="goods_all">
+            <thead>
+                <tr bgcolor="lightgray" class="tr1">
+                    <th>
+                        <input type="checkbox" name="selectAll" class="checkbox1" onclick="selectAll('checkbox1');">全选/
+                        <input type="checkbox" name="reverseSelect" class="checkbox1" onclick="reverseSelect('checkbox1');">反选
+                    </th>
+                    <th>
+                        头像
+                    </th>
+                    <th>
+                        用户名
+                    </th>
+                    <th>
+                        密码
+                    </th>
+                   
+                    <th>
+                        注册时间
+                    </th>
+                    <th>
+                        是否审核
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+            </thead>
+            <script>
+                var picSrc = ['images/bg5.jpg','images/bg6.jpg','images/touxiang6.jpg','images/touxiang7.jpg','images/touxiang8.jpg'];
+                var goodsType = ['sggsa2672', 'xjs98678', 'hsdjjk67867',
+                    'sdh6253567','siu65204'];
+                var goodsName = ['XJTU', 'STU', '我爱足球', '阿伟2322', 'young1234'];
+                var goodsInfo = '';
+                for(var i=0; i<picSrc.length; i++){
+                    goodsInfo += '<tr class="tr1"><td><input type="checkbox" class="checkbox1"></td><td class="pic"><img src="'+ picSrc[i] +
+                        '" width="80px" height="110px"></td><td>'+ goodsName[i] + '</td><td>'+ goodsType[i] +
+                            '</td><td>2024-07-25</td><td>已审核</td><td><a >查看</a>&nbsp;&nbsp;<a class="delete">删除</a></td></tr>';
+                }
+                document.write(goodsInfo);
+            </script>
+             <script language="JavaScript" src="jquery-3.7.1.min.js"></script>
+             <script>
+                $('.delete').click(function(){
+                    
+                    $(this).parents("tr").addClass('off')
+                })
+             </script>
+        </table>
+    </div>
+        <div class="table" id="off">
+            <input type="button" value="还原" id="recovery1" ><input type="button" value="全部清空" id="deleteall1" ><input type="button" value="选中清空" id="deletesome1" >
+            <script language="JavaScript" src="jquery-3.7.1.min.js"></script>
+             <script>
+                 $('#recovery1').click(function(){
+                    $(".tr2").removeClass('off')
+                 })
+                 $('#deleteall1').click(function(){
+                    $(".tr2:gt(0)").addClass('off')
+                 })
+                 $('#deletesome1').click(function(){
+                   for( var i=2;i<document.getElementsByClassName('checkbox').length;i++){
+
+                    if(document.getElementsByClassName('checkbox')[i].checked==true){
+                        $(".tr2:eq("+(i-1)+")").addClass('off')
+                    }
+                   }
+                 })
+             </script>
+            <table class="goods_all">
+            <thead>
+                <tr bgcolor="lightgray" class="tr2">
+                    <th>
+                        <input type="checkbox" name="selectAll" class="checkbox" onclick="selectAll('checkbox');">全选/
+                        <input type="checkbox" name="reverseSelect" class="checkbox" onclick="reverseSelect('checkbox');">反选
+                    </th>
+                    <th>
+                        头像
+                    </th>
+                    <th>
+                        作者
+                    </th>
+                    <th>
+                        新闻标题
+                    </th>
+                    <th>
+                        投稿数
+                    </th>
+                    <th>
+                        稿费
+                    </th>
+                    <th>
+                        发布时间
+                    </th>
+                    <th>
+                        是否审核
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+            </thead>
+            <script>
+                var picSrc = ['images/touxiang1.jpg','images/touxiang2.jpg','images/touxiang3.jpg','images/touxiang4.jpg','images/touxiang5.jpg'];
+                var goodsType = ['与远藤航同队？曝利物浦6500万欧签久保建英 年薪1500万欧', '巴萨官宣亚马尔新赛季身背19号 穿梅西穿过的球衣走他走过的路', '官方：要求梅西和足协向公众道歉的阿根廷体育副部长遭解职',
+                    '夏窗转会榜:1.8亿欧姆巴佩0价最轰动 标王5300万欧拜仁','曝巴萨与尼科-威廉姆斯经纪人会面谈妥合同 竟还想再购奥尔莫？'];
+                var goodsName = ['凤梨足球', '地上足球', '真实足球', '苦苦足球', '万宁足球'];
+                var goodsInfo = '';
+                for(var i=0; i<picSrc.length; i++){
+                    goodsInfo += '<tr class="tr2"><td><input type="checkbox" class="checkbox"></td><td class="pic"><img src="'+ picSrc[i] +
+                        '" width="80px" height="110px"></td><td>'+ goodsName[i] + '</td><td>'+ goodsType[i] +
+                            '</td><td>1</td><td>￥20.00</td><td>2024-07-25</td><td>已审核</td><td><a >查看</a>&nbsp;&nbsp;<a class="delete">删除</a></td></tr>';
+                }
+                document.write(goodsInfo);
+            </script>
+             <script language="JavaScript" src="jquery-3.7.1.min.js"></script>
+             <script>
+                $('.delete').click(function(){
+                    
+                    $(this).parents("tr").addClass('off')
+                })
+             </script>
+        </table>
+        
+    </div>
+    <div class="table" id="off">
+        <img src="images/biao1.png">
+    </div>
+    </div>
+</div>
+<div class="bottem">
+    <div class="bottem_content">
+        <p>支付中心 - 网站招聘 - 广告服务 - 联系方式 - About us - 公司介绍 - 隐私政策</br>Copyright © 2024  All Rights Reserved. xx公司 版权所有</p>
+     </div>
+  </div>  
+</body>
+</html>

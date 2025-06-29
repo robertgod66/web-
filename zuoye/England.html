@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英超赛事</title>
+    <style>
+         
+        *{margin: 0;padding: 0;font-family:"STSong"}
+        .menu{ width:auto; background-color:white;}
+        body{background-image: url(images/bg1.jpg);background-size: cover;}
+        
+        a:link{text-decoration: none; color:black}
+        a:visited{color:black;}
+        hr{border: none;height: 3px;background-color: black;}
+        .hr1{border: none;height: 1px;background-color: rgb(121, 116, 116);}
+        .pic{width: 100%;text-align: center;}
+        .banner{height: 120px;width: auto;
+                background-image: url(https://ts1.cn.mm.bing.net/th/id/R-C.5fc0ef0bb4982f3a00bbbe9d3b2a1386?rik=aivc03%2bZNTG%2fmA&riu=http%3a%2f%2fwww.houqi.design%2fUploads%2f201606%2f575e077c365f3.jpg&ehk=XVDewXpQNX0S3s5nuEXzKr18Jf06wrOibvQmR2I%2bL7Y%3d&risl=&pid=ImgRaw&r=0);
+                background-size: contain;}
+        .menu_banner{width:80%;margin: 0 auto;}
+        .menu_banner img{width: 100%;}
+        .top{width:auto;height: 50px;background-color: rgb(238, 238, 243); border: 2px  gray solid;}
+        .content{height:50px;width: 50%;margin: 0 auto;display: flex;justify-content: space-between;}
+        .content span{ width: 60px;height: 50px;text-align: center;line-height: 50px; font-size: 18px;}
+        .middle{width:80%;height:2680px; margin:0 auto;background-color: white;}
+        .middle div{float:left; border:2px white solid;}
+        .left{width:35%;background-color: white;text-align:left;}
+        .left img{height: 220px;}
+        .mid{width:35%;background-color: white}
+        .right{width:28%;background-color: white;}
+          li{font-size: 15px;height:30px;line-height: 30px;overflow: hidden;}
+        .heat{font-size: 20px;font-family: 'Courier New', Courier, monospace;}
+        .left_head{height: 100px;width: auto;line-height: 100px;text-align: justify;border:0;}
+         h1{border: 0;}
+        .list{width:100%}
+        .list_head{height: 50px;width: 100%;line-height: 50px;text-align: justify;}
+        .list_heat{height: 100px;width: 100% ; }
+        .list_heat img{height: 100px;width: 34%;float: left;}
+        .list_content{height: 100px; width:65%;float: right; text-align: left;}
+        .list_banner{width: 100%;}
+        .list_banner_content{height: 40px;width: 80%;display: flex;justify-content: space-between;position:relative;top:0;bottom: 0;left: 70px; right: 0;}
+        .list_banner_content1{height: 40px;width: 95%;display: flex;justify-content: space-between;}
+        .list_banner_content span,.list_banner_content1 span{width: 90px;height: 40px;line-height: 40px;text-align: left; font-size: 18px;overflow: hidden}
+        
+        .list_banner_content span font{font-size: smaller; color: gray;}
+        .rank{width: 50px;height: 40px;clear: both;}
+        .rank div{width: 25px;height: 25px;text-align: center;line-height: 25px;position: relative;left:20px ;top:5px ;bottom: 0;right:0;}
+        .first{background-color: red; color: white;}
+        .second{background-color: orange;color: white;}
+        .third{background-color: burlywood;color: white;}
+        .norm{background-color: lightgray;color:gray;}
+        p font{font-size: smaller;color: lightgray;}
+        .times{width:70%;height: 1000px;background-color: ghostwhite;}
+        .times_context{width: 100%;}
+        .blank{ width:20%}
+        .blank_content{width: 100%;height:40px;line-height: 40px;background-color: lightgray; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+        .text{width:79%;overflow: hidden;}
+        .text_content{width:100%;overflow: hidden;}
+        .text_content_section{width:100%;height:150px;background-color: whitesmoke}
+        .text_content_section img{height: 150px;width:230px}
+        .text_content_section div{width:65%;height: 150px;float: right;}
+        .text_right{width:29%; background-color: white }
+        .text2{width:100%}
+        .text_content_section2{width:100%;height:70px;background-color: whitesmoke;display: flex;justify-content: space-between; }
+        .pic3{width:150px;height: 70px; text-align: center;}
+        .pic3 img{height:100%}
+        .article{width:200px;height: 70px; line-height: 20px;overflow: hidden;}
+        .first2{background-color: red;width: 26px;height: 24px;text-align: center;line-height: 24px;color: white;}
+        .second2{background-color:orange;width: 26px;height: 24px;text-align: center;line-height: 24px;color: white;}
+        .third2{background-color:burlywood ;width: 26px;height: 24px;text-align: center;line-height: 24px;color: white;}
+        .norm2{width: 26px;height: 24px}
+        .pic3 img{width:100px;height: 70px;}
+        .pic_bg img{width:80%;height: 218px; }
+        ul,li{list-style: none;}
+        .pic_bg{width: 100%; margin: 0 auto; text-align: center;}
+        .focusBox{position: absolute; width: 60px; top:550px; left:25%; margin-left: -30px; height: 30px; }
+        .focusBox li{float: left;margin-right: 5px; width: 8px; height: 8px; 
+            border-radius: 5px; background-color: gray; cursor:pointer}
+        li.cur{background-color:orange}
+        .bottem{width: 100%;height: 90px;background-color:dimgray}
+    .bottem_content{width: 60%;height:90px;margin: auto auto;text-align: center;line-height: 45px;background-color:dimgray;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: white;font-size: smaller;}
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="banner">
+        </div>  
+        <div class="top">
+            <div class="content">
+                <span><strong><a href="D:\vscode1\实训\zuoye\work.html" >首页</strong></a></span>
+                <span><strong>积分</strong></span>
+                <span><strong>赛程</strong></span>
+                <span><strong>射手</strong></span>
+            </div>
+        </div>
+    </div>
+    <div class="menu_banner">
+      <img src="D:\vscode1\实训\zuoye\images\英超比赛.png">
+    </div>
+    <div class="middle">
+        <div class="left">
+         <div class="pic_bg">
+            <img src="images/e1.png" id="pic">
+            <ul class="focusBox">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <script>
+            var index = 2;
+            function changePic(){
+                if(index == 4){   
+                    index = 1;
+                }
+                var addr = "images/e"+ index +".png";  
+                var picEle = document.getElementById('pic');  
+                picEle.src = addr;  
+                var liList = document.getElementsByClassName('focusBox')[0].getElementsByTagName('li');
+                for(var i=0;i<liList.length; i++){
+                    liList[i].className = '';
+                }
+                liList[index-1].className = 'cur';
+                index++;  
+            }
+    
+            window.setInterval(changePic, 1000);
+    
+        </script>
+          <div class="left_head"><h1>英超诸强</h1></div>
+          <div class="list">
+              <div class="list_head"><h2>曼联</h2><hr></div>
+              <div class="list_heat"><img src="https://q1.itc.cn/images01/20240719/fa06c06b2d7b404eb250cedb909884f0.jpeg"><div class="list_content"><p><strong>托尼降价传闻背后的真相，阿森纳、利物浦和曼联对此嗤之以鼻</strong></p><br/><p><font>足球文化FF· 29分钟前</font></p></div></div>
+              <div class="News_content">
+                 <ul>
+                    <hr class="hr1">
+                   <li>利物浦耻辱一战：0-1输英冠队，曼联旧将世界波！主帅：运气不好</li>
+                   <li>曼联小麦与女友在土耳其度假 晒照秀傲人身材</li>
+                   <li>埃里克森：英格兰要找到合适他们的教练，国籍并不重要</li>
+                   <li>桑乔一脚射门，造三张红牌！</li>
+                   <li>曼联火速出手买入两名新援，25岁以下潜力之星一箩筐，滕哈格笑了</li>
+                   <li>罗马诺：奥比-马丁未接受阿森纳续约报价，已造访曼联等俱乐部</li>
+                   <li>重磅！格林伍德离开后，曼联愿意出售六名球员，安东尼将租借离队</li>
+                   <li>曝德利赫特转会曼联被搁置 红魔不愿为其支付5000万欧</li>
+                   <li>阿根廷20岁新星加纳乔冷漠对待梅西的视频国外疯传，</li> 
+                 </ul>
+              </div>
+          </div>
+          <div class="list">
+            <div class="list_head"><h2>曼城</h2><hr></div>
+            <div class="list_heat"><img src="https://q2.itc.cn/images01/20240722/a4f03f41bb77427da4a8a96438ef6c95.jpeg"><div class="list_content"><p><strong>德布劳内和吉达联合达成个人条款，如曼城放行，阿森纳将夺冠 </strong></p><br/><p><font>英超足球那些事· 42分钟前</font></p></div></div>
+            <div class="News_content">
+               <ul>
+                  <hr class="hr1">
+                 <li>曼城不是巴萨，拿一个卖不掉的人，去换曼城大将，简直是异想天开</li>
+                 <li>京多安：我曾为克洛普踢球 自从加入瓜迪奥拉的曼城 才真正懂了足球</li>
+                 <li>如果德布劳内的绯闻是真的，那就证明了，阿尔瓦雷斯机会来了</li>
+                 <li>斯托伊奇科夫：西班牙还会赢得世界杯冠军 罗德里是我心中最佳</li>
+                 <li>曼城要崩，门神即将离队：沙特匹配5000万镑要价！瓜帅连遭2重击</li>
+                 <li>4500万欧！阿森纳夏窗首签出炉，后防线华丽升级，曼城王位不保</li>
+                 <li>阿根廷国奥晒阿尔瓦雷斯等球员训练照片，7月24日首战对阵摩洛哥</li>
+                 <li>曼城真核淘金，瓜帅4大备选恐全落空！拜仁斗法核心，皇马成赢家</li>
+                 <li>一夜10大转会动态：德布劳内或离开曼城，尼科将成巴萨</li> 
+               </ul>
+            </div>
+        </div>
+        <div class="list">
+          <div class="list_head"><h2>利物浦</h2><hr></div>
+          <div class="list_heat"><img src="https://q2.itc.cn/images01/20240722/807ff6395878427db2fbfd3478bc7229.jpeg"><div class="list_content"><p><strong>利物浦到底卖不卖萨拉赫？众说纷纭间，揭示了队伍接下来的思</strong></p><br/><p><font>里芃芃体育· 3小时前</font></p></div></div>
+          <div class="News_content">
+             <ul>
+                <hr class="hr1">
+               <li>阿恩·斯洛特：范戴克今年夏天可能离开利物浦</li>
+               <li>利物浦新目标葡萄牙体育潜力中卫葡萄牙国脚伊纳西奥</li>
+               <li>计划有变！曝萨拉赫至少续约1年，皇马有望签阿诺德，利物浦观望</li>
+               <li>7年前的今天罗伯逊加盟利物浦，至今出战297场11球65助</li>
+               <li>葡媒：利物浦中卫补强首选伊纳西奥 葡体标价降至4500万欧</li>
+               <li>罗马诺：奥比-马丁未接受阿森纳续约报价，已造访曼联等俱乐部</li>
+               <li>葡媒：利物浦中卫补强首选伊纳西奥 葡体标价降至4500万欧</li>
+               <li>球报：利物浦防线头号目标葡体后卫伊纳西奥，愿付3000万</li>
+               <li>7年前的今天罗伯逊加盟利物浦，至今出战297场11球65助</li> 
+             </ul>
+          </div>
+      </div>
+        </div>
+        <div class="mid">
+            <div class="News_content">
+                  <ul>
+                    <li class="heat"><strong>曼城能签萨维奥因转会在欧足联新规前完成，曼联则</strong></li>
+                    <li>选择！曝大巴黎7000万欧签内维斯，曼联接手乌加特，放</li>
+                    <li>今日英超新闻速览：曼联转会保持套路，蓝军“偷偷给”主</li>
+                  </ul>
+                  <br/><br/>
+                  <ul>
+                    <li class="heat"><strong>德布劳内或离开曼城，尼科将成巴萨今夏首签</strong></li>
+                    <li>钱太少！曝马竞2000万镑求购加拉格尔 切尔西已拒绝</li>
+                    <li>太阳报：韦霍斯特希望离开英冠伯恩利，阿贾克斯对其有意</li>
+                  </ul>
+            </div>
+            <div class="left_head"></div>
+            <div class="list">
+                <div class="list_head"><h2>切尔西</h2><hr></div>
+                <div class="list_heat"><img src="https://q5.itc.cn/images01/20240722/38f9a0d4243e4485854fccba0e88b5ff.png"><div class="list_content"><p><strong>切尔西巨星恩佐回到河床不理智举动国外疯传</strong></p><br/><p><font>足球文化FF· 29分钟前</font></p></div></div>
+                <div class="News_content">
+                   <ul>
+                      <hr class="hr1">
+                     <li>切尔西巨星恩佐回到河床不理智举动国外疯传，球迷：不尊重切尔西</li>
+                     <li>钱太少！曝马竞2000万镑求购加拉格尔 切尔西已拒绝</li>
+                     <li>英超是全球最多关注的足球联赛，但为何英格兰在现代一直无法问鼎冠军？</li>
+                     <li>5次高价售卖4次不靠谱，即将出售19岁小将，足坛第一黑店名副其实</li>
+                     <li>穆里尼奥亲自下场谈妥新援，恩-内斯里放弃罗马加盟费内巴切！</li>
+                     <li>又怎么了？卢卡库删除了个人社媒所有效力过球队的相关照片</li>
+                     <li>看球的女生，被男人挤出场外</li>
+                     <li>菲利克斯：告别豪门，本菲卡邀请重返</li>
+                     <li>古斯塔沃上演帽子戏法 海港除非像上赛季连续犯错 否，</li> 
+                   </ul>
+                </div>
+            </div>
+            <div class="list">
+                <div class="list_head"><h2>阿森纳</h2><hr></div>
+                <div class="list_heat"><img src="https://q9.itc.cn/q_70/images03/20240722/ae60b5ff4bb74d8f8e81ba7b420e6a22.jpeg"><div class="list_content"><p><strong>阿森纳美国行阵容全体合影：马丁内利、哈弗茨将与球队汇合</strong></p><br/><p><font>足球文化FF· 59分钟前</font></p></div></div>
+                <div class="News_content">
+                   <ul>
+                      <hr class="hr1">
+                     <li>德布劳内和吉达联合达成个人条款，如曼城放行，阿森纳将夺冠</li>
+                     <li>4500万欧！阿森纳夏窗首签出炉，后防线华丽升级，曼城王位不保</li>
+                     <li>塞特福德：感谢阿森纳给我效力的机会，已迫不及待要表现自己</li>
+                      <li>穆帅看走眼！260万放走罗马宝藏后卫，如今身价4500万+签约阿森纳</li>
+                      <li>即将加盟阿森纳！塞特福德告别阿贾克斯：感谢美好的十多年时光！</li>
+                      <li>左后卫答案？卡拉菲奥里上赛季多项关键数据优于津琴科&基维奥尔</li>
+                      <li>阿森纳4500万欧敲定卡拉菲奥里，巴萨自信10天内能搞定尼科的转会</li>
+                      <li>阿森纳砸4000万欧元签下意大利后防大将新马尔蒂尼</li>
+                      <li>德转列左脚将最贵阵：哈兰德、萨卡、马马达领衔，曼城枪手</li>
+                   </ul>
+                </div>
+            </div>
+            <div class="list">
+              <div class="list_head"><h2>热刺</h2><hr></div>
+              <div class="list_heat"><img src="https://q8.itc.cn/q_70/images03/20240715/2cf65f57a38e495b81b9fa5feb045733.jpeg"><div class="list_content"><p><strong>6名球员分享“得分王”奖杯创纪录，凯恩成最伤心的最佳 </strong></p><br/><p><font>澎湃新闻· 7分钟前</font></p></div></div>
+              <div class="News_content">
+                 <ul>
+                    <hr class="hr1">
+                   
+                    <li>效率不错！16号秀麦凯恩出战16分钟 里突外投贡献15分4助攻</li>
+                    <li>亚马尔闪耀登场，凯恩落寞而归</li>
+                    <li>英媒：维拉热刺纽卡都有意芒特，曼联对出售芒特和安东尼态度开放</li>
+                    <li>马赛要争冠？签下曼联前锋之后 还要签下热刺铁腰</li>
+                    <li>凯恩：没能夺冠令我心碎，但我会振作起来，擦干眼泪再次战斗！</li>
+                    <li>现在这个节点，凯恩和劳塔罗的地位谁更高？</li>
+                    <li>豪门之夜！桑乔首发曼联2-0 小小马尔蒂尼助攻米兰1-1 热刺2-0</li>
+                    <li>2-0！2连胜+连续4场不败！热刺踢疯了！澳波新赛季率队争冠</li>
+                    <li>友谊赛-比苏马破门斯卡列特替补建功 热刺2-0女王公</li>
+                 </ul>
+              </div>
+          </div>
+        </div>
+        <div class="right">
+           <div class="list">
+               <div class="list_head"><h2>积分榜</h2><hr></div>
+               <div class="list_banner">
+                 <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球队</font></span><span><font>胜/平/负</font></span><span><font>积分</font></span></div>
+                 <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">曼城</span><span>27/7/3</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;91</span></div>
+                 <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">阿森纳</span><span>28/5/5</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;89</span></div>
+                 <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">利物浦</span><span>24/10/4</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;82</span></div>
+                 <div class="list_banner_content1"><span class="rank"><div class="norm">4</div></span><span class="list_main">阿斯顿维拉</span><span>20/8/10</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;68</span></div>
+                 <div class="list_banner_content1"><span class="rank"><div class="norm">5</div></span><span class="list_main">热刺</span><span>20/6/12</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;66</span></div>
+                 <div class="list_banner_content1"><span class="rank"><div class="norm">6</div></span><span class="list_main">切尔西</span><span>18/9/11</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;63</span></div>
+                 <div class="list_banner_content1"><span class="rank"><div class="norm">7</div></span><span class="list_main">纽卡斯尔</span><span>18/6/14</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60</span></div>
+                 <div class="list_banner_content1"><span class="rank"><div class="norm">8</div></span><span class="list_main">曼联</span><span>18/6/14</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60</span></div>
+                </div>
+           </div>
+           <img src="https://q1.itc.cn/images01/20240720/11d3620310914a86869e8663b04a34c2.jpeg" width="100%">
+           <div class="list">
+            <div class="list_head"><h2>射手榜</h2><hr></div>
+            <div class="list_banner">
+              <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球员</font></span><span><font>球队</font></span><span><font>进球</font></span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">哈兰德</span><span>曼城</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27</span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">帕尔默</span><span>切尔西</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22</span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">伊萨克</span><span>纽卡斯尔</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21</span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="norm">4</div></span><span class="list_main">沃特金斯</span><span>阿斯顿维拉</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19</span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="norm">5</div></span><span class="list_main">福登</span><span>曼城</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19</span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="norm">6</div></span><span class="list_main">索兰克</span><span>伯恩茅斯</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19</span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="norm">7</div></span><span class="list_main">萨拉赫</span><span>利物浦</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18</span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="norm">8</div></span><span class="list_main">孙兴民</span><span>热刺</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17</span></div>
+             </div>
+        </div>
+          <div class="list">
+            <div class="list_head"><h2>英超球队一览</h2><hr></div>
+             <div class="pic"><img src="D:\vscode1\实训\zuoye\images\英超球队.png"  height="415px" ></div>
+          </div>  
+        </div>
+       <div class="times">
+        <div class="left_head"><h1>英超动态</h1></div>
+        <div class="times_context">
+          <div class="blank">
+             <script>
+                 var names=["曼联","曼城","利物浦","切尔西","阿森纳","热刺","莱斯特城","西汉姆联","利兹联","埃弗顿","阿斯顿维拉","纽卡斯尔","狼队","水晶宫","南安普顿","布莱顿","布伦特福德","富勒姆","伯恩茅斯","诺丁汉森林"]
+                 for(var i=0;i<names.length;i++){
+                   var info="<div class='blank_content'>&nbsp&nbsp&nbsp|"+names[i]+"</div>"
+                   document.write(info)
+                 }
+             </script>
+          </div>
+          <div class="text">
+             <div class="text_content">
+                <div class="text_content_section">
+                  <img src="https://q8.itc.cn/images01/20240722/a87382e94be346f4be0614479fcd1f11.png"><div><p><h3>皇马典礼三中场到英超最差后腰？场均被过2.2次 巴西国家队弃用 </h3><br/><font size="3px" color="gray">皇马是足坛最佳俱乐部，卡塞米罗无法匹配其收入与贡献。卡塞米罗因状...</font></p><br/><p><font>足球部落· 昨天9:36· 4.2万阅读</font></p></div>
+                  <hr class="hr1">
+                </div>
+               
+                <div class="text_content_section">
+                  <img src="https://q4.itc.cn/q_70/images03/20240720/de3c905ee74145a3a29f46aaf1d7360c.jpeg"><div><p><h3>早报：31岁瓦拉内将加盟意甲科莫</h3><br/><font size="3px" color="gray">知名记者罗马诺报道称，瓦拉内将免签加盟意甲升班马科莫，herewego！...</font></p><br/><p><font>直播吧· 昨天10:36· 8.2万阅读</font></p></div>
+                  <hr class="hr1">
+                </div>
+                
+                <div class="text_content_section">
+                  <img src="https://q6.itc.cn/q_70/images03/20240721/eb6fd487fa2d4355be3f4b3ee2b27bcc.jpeg"><div><p><h3>莫吉：道格拉斯-路易斯只是个普通巴西人，能否立足尤文有待观察 </h3><br/><font size="3px" color="gray">直播吧7月22日讯前尤文高层莫吉在不久前接受采访，对引进道格拉斯-路...</font></p><br/><p><font>直播吧· 15:36· 9.2万阅读</font></p></div>
+                  <hr class="hr1">
+                </div>
+              
+                <div class="text_content_section">
+                  <img src="https://q7.itc.cn/images01/20240719/b666d6c02f2d4b209815c08e8a683567.jpeg"><div><p><h3>7场0球0助，摇变欧洲杯水货！24岁瓜帅爱将笑麻了，身价仍值1.5亿</h3><br/><font size="3px" color="gray">近日，德国转会市场更新一批球员身价，刚刚年满17岁的亚马尔再获好消...</font></p><br/><p><font>侃球部落· 昨天10:36· 1.2万阅读</font></p></div>
+                  <hr class="hr1">
+                </div>
+               
+                <div class="text_content_section">
+                  <img src="https://q7.itc.cn/q_70,c_lfill,w_468,h_264,g_face/images01/20240722/273bd4f1011945d690688d1b14065246.png"><div><p><h3>穆帅的费内巴切1400万英镑，报价英超1米91中场3000万英镑中场。 </h3><br/><font size="3px" color="gray">费内巴切主帅穆里尼奥已经将英超诺丁汉森林队的一名中场球员，列入引援名单...</font></p><br/><p><font>足球热吧· 15:06· 9.0万阅读</font></p></div>
+                  <hr class="hr1">
+                </div>
+                <img src="images\banner.png" width="100%">
+             </div>
+             
+          </div>
+        </div>
+       </div>
+       <div class="text_right">
+        <div class="pic"><img src="https://q9.itc.cn/q_70/images03/20240720/485c7065c44a4437ab86cb609bee723c.jpeg" width="99%"></div>
+        <div class="text2">
+          <div class="list_head"><h2>24小时热点</h2><hr></div>
+          <div class="text_content2">
+             <div class="text_content_section2">
+              <span class="first2">1</span>
+              <span class="pic3"><img src="https://q4.itc.cn/images01/20240722/c97f1c6b92c1403f847a2cff36ff2970.jpeg"></span>
+              <span class="article"><p><h5>拿一个卖不掉的人，去换曼城大将，简直是异想天开 </h5><p><font class="font2">牢大体育· 昨天10:36· 2.4万阅读</font></p></span>
+             </div>
+             <div class="text_content_section2">
+              <span class="second2">2</span>
+              <span class="pic3"><img src="https://q0.itc.cn/images01/20240721/093e5ee1348b4eca9f76fabd5e7a85a9.jpeg"></span>
+              <span class="article"><p><h5>阿根廷大赛三连可否媲美当年的西班牙？</h5><p><font class="font2">牢大体育· 昨天10:36· 2.4万阅读</font></p></span>
+           </div>
+           <div class="text_content_section2">
+              <span class="third2">3</span>
+              <span class="pic3"><img src="https://q4.itc.cn/images01/20240721/3b5f8b00b5304364aeebef836accabe3.png"></span>
+              <span class="article"><p><h5>迈阿密为梅西举办45冠仪式,接受全场球迷顶礼膜拜 </h5><p><font class="font2">818体育· 今天10:36· 1.2万阅读</font></p></span>
+           </div>
+           <div class="text_content_section2">
+              <span class="norm2"></span>
+              <span class="pic3"><img src="https://q6.itc.cn/images01/20240720/1d99db1a70f04a5c8e4735c3d82fc5c3.jpeg"></span>
+              <span class="article"><p><h5>再见奥运会！再见世界杯？五星巴西沉沦，阿根廷在南美一家独大 </h5><p><font class="font2">阿伟罗体育· 昨天11:36· 7万阅读</font></p></span>
+           </div>
+           
+          </div>    
+  </div>
+     <img src="https://img1.qunliao.info/fastdfs6/M00/0F/F6/720x-/-/-/rBUESWCa0pyASNSQAAUZrYva-is561.jpg" width="100%" height="360px">
+      </div>
+
+    </div>
+    <div class="bottem">
+      <div class="bottem_content">
+          <p>支付中心 - 网站招聘 - 广告服务 - 联系方式 - About us - 公司介绍 - 隐私政策</br>Copyright © 2024  All Rights Reserved. xx公司 版权所有</p>
+       </div>
+    </div>  
+</body>
+</html>

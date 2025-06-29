@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻详情</title>
+    <style>
+        *{margin: 0;padding: 0;font-family:"STSong"}
+        body{background-image: url(images/bg1.jpg);height: 1100px;}
+        div{width:100%}
+        hr{border: none;height: 3px;background-color: black;}
+        .content{width:80%;margin: 0 auto;}
+         .content div{border: 2px white solid;border-right: 0;}
+        .left{width:15%;height: 1100px;float: left;background-color: white;}
+        .mid{width:55%;height: 1100px;float: left;background-color: ghostwhite;overflow-y: scroll;overflow-x: hidden;}
+        .right{width:29.5%;height: 1000px;float: left;background-color: white;}
+        .writer{height:280px;background-color: whitesmoke;}
+        .pic1{height:80px;text-align: center;}
+        .works{width: 49%;text-align: center;border-right: 0.5px black solid;}
+        .likes{width: 49%;text-align: center;border-left:0.5px black solid;}
+        .name{font-size: 25px;text-align: center;height: 100px;line-height: 100px;}
+        .left_block1{display: flex;justify-content: space-between;height: 80px;line-height: 40px;}
+        .font1{font-size: larger;}
+        .font2{font-size: smaller;color: lightgray;}
+        .list{width:100%}
+        .list_head{height: 50px;width: 100%;line-height: 50px;text-align: left;}
+        .list_head1{height: 50px;width: 100%;line-height: 50px;text-align: center;}
+        .list_banner{width: 100%;}
+        .list_banner_content{height: 40px;width: 80%;display: flex;justify-content: space-between;position:relative;top:0;bottom: 0;left: 70px; right: 0;}
+        .list_banner_content1,.list_banner_content2{height: 40px;width: 95%;display: flex;justify-content: space-between;}
+        .list_banner_content span,.list_banner_content1 span{width: 90px;height: 40px;line-height: 40px;text-align: left; font-size: 18px;overflow: hidden}
+        .collect{width:70px;text-align: center;}
+        .list_banner_content span font{font-size: smaller; color: gray;}
+        .rank{width: 50px;height: 40px;clear: both;}
+        .rank div{width: 25px;height: 25px;text-align: center;line-height: 25px;position: relative;left:20px ;top:5px ;bottom: 0;right:0;}
+        .mid_content p{line-height: 30px;font-size:18px;font-family:Georgia, 'Times New Roman', Times, serif;}
+        .mid img,.rank img{width:100%}
+        .pics{width:100%; height:266px;}
+        .pics_content{width:48%; float: left;}
+        .pic2{width: 100%;height: 90px;overflow: hidden;}
+        .pics_content img{width:100%; }
+        .pics_content div{width: 100%;font-size: smaller;}
+        .pic2_content_text{height: 30px;overflow: hidden;}
+        .text{width:100%}
+        .text_content{width:100%}
+        .text_content_section{width:100%;height:70px;background-color:rgb(255, 250, 250);display: flex;justify-content: space-between; }
+        .text_content_section img{width:110px;height: 105px;}
+        .pic3{width:170px;height: 70px; text-align: center;}
+        .pic3 img{height:100%}
+        .article{width:250px;height: 70px; line-height: 20px;}
+        .first{background-color: red;width: 29px;height: 24px;text-align: center;line-height: 24px;color: white;}
+        .second{background-color:orange;width: 29px;height: 24px;text-align: center;line-height: 24px;color: white;}
+        .third{background-color:burlywood ;width: 29px;height: 24px;text-align: center;line-height: 24px;color: white;}
+        .norm{width: 29px;height: 24px}
+        .bottem{width: 100%;height: 90px;background-color:dimgray;clear: both;}
+    .bottem_content{width: 100%;height:90px;margin: auto auto;text-align: center;line-height: 45px;background-color:dimgray;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: white;font-size: smaller;}
+
+    </style>
+    <script>
+               
+        function changePic(event){
+            var big_pic = document.getElementById('big_pic');
+            big_pic.src = event.src;  
+        }
+     </script> 
+</head>
+<body>
+    <div class="content">
+        <div class="left">
+            <div class="writer">
+                <div class="pic1"><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.9oF1a33VGtAetu-UvSnM-gHaHa?rs=1&pid=ImgDetMain" height="80px"></div>
+                <div class="writer_content">
+                    <div class="name"><strong>地上足球666</strong></div>
+                    <div class="left_block1">
+                    <span class="works"><p><font class="font1">314</font><br/><font class="font2">投稿数</font></p></span>
+                    <span class="likes"><p><font class="font1">10w+</font><br/><font class="font2">获赞数</font></p></span>
+                    </div>
+                </div>    
+            </div>
+            <div class="list">
+                <div class="list_head1"><h2>分享</h2><hr></div>
+                <div class="list_banner">
+                  <div class="list_banner_content1"><span class="rank"><div><img src="D:\vscode1\实训\zuoye\images\微信.png"></div></span><span class="list_main"> 微信分享</span></div>
+                  <div class="list_banner_content1"><span class="rank"><div><img src="D:\vscode1\实训\zuoye\images\qq.png"></div></span><span class="list_main">qq分享</span></div>
+                  <div class="list_banner_content1"><span class="rank"><div><img src="D:\vscode1\实训\zuoye\images\微博.png"></div></span><span class="list_main">微博分享</span></div>
+                  
+                 </div>
+            </div>
+            <div class="list">
+                <div class="list_head1"><h2>点赞/收藏</h2><hr></div>
+                <div class="list_banner">
+                <div class="list_banner_content1"><span class="rank"><div><img src="images/likes1.jpg" onclick="ChangePic(this);" id="likes"></div></span><span class="list_main"> 点赞</span></div>
+                
+                <script>
+                   function ChangePic(event){
+                    var imgSrc=document.getElementById('likes').src;
+                    if(imgSrc.indexOf('2')==-1){
+                    event.src="images/likes2.jpg";
+                    alert('点赞成功');
+                    }else{
+                        event.src="images/likes1.jpg";
+                        alert('已取消点赞');
+                    }
+                   }
+                </script>
+                <div class="list_banner_content1"><span class="rank"><div><img src="images/收藏1.png" onclick="ChangePic1(this)" id="collect"></div></span><span class="list_main">收藏</span></div>
+                <script>
+                    
+                   function ChangePic1(event){
+                    var imgSrc=document.getElementById('collect').src;
+                    if(imgSrc.indexOf('2')==-1){
+                    event.src="images/收藏2.png";
+                    alert('收藏成功');
+                    }else{
+                        event.src="images/收藏1.png";
+                    alert('已取消收藏');
+                    }
+                   }
+            
+                 </script>
+                </div>
+            </div> 
+            <div class="list">
+                <div class="list_head1"><h2>评论</h2><hr></div><br/>
+                <textarea width="100%"></textarea>
+            </div>       
+        </div>
+        <div class="mid">
+            <div class="head">
+                <div><h1> 巴萨如何与姆巴佩皇马抗衡？得尼科、奥尔莫后，这套首发可以 !</h1><hr></div>
+                <div><font color="gray">2024-07-21 13:38 &nbsp;&nbsp;&nbsp;发布于：湖北省</font></div>
+            </div>
+            <div class="mid_content">
+                <p>2023-24赛季，皇马力压巴萨赢得西甲、欧冠双冠。今年夏窗，皇马又得到了姆巴佩，即将来投的还有提前签下的巴西锋线新星恩德里克。
+                    <br>
+                    不少人认为，这下巴萨没得混了！
+                    <br>
+                    情况真的这么悲观吗？不见得！<br><br></p>
+                <img src="https://q5.itc.cn/images01/20240721/3653cfbbf7f442349e8e5667348e37b3.jpeg">
+                <p>上赛季的皇马，阵容真的很强吗？至少没有BBC时代强，一名踢中场的球员成为球队第一射手，这就说明前锋不行。西甲能够夺冠，在于巴萨掉链子，在于哈维执教能力平庸还爱冲动发脾气。
+                    <br>
+                    欧冠能夺冠，运气真的是太好了！1/4决赛对阵卫冕冠军曼城，次回合客场守住平局最后将瓜迪奥拉的球队拖入点球大战。半决赛次回合主场对阵拜仁，比赛临近结束，皇马也临近出局了，铁板凳何塞卢替补登场梅开二度拯救了皇马。赛季中途，阵容单薄受伤病困扰，安切洛蒂一度都准备跑路，去执教巴西国家队了。
+                    <br>
+                    如今得到了姆巴佩，阵容实力肯定是明显增强了，但也不可能就对巴萨形成碾压性的优势了。姆巴佩再强，也没有巅峰梅西、C罗、内马尔强，在巴黎踢了七年，也没能赢得欧冠冠军。2024年欧洲杯，姆巴佩的表现则很平庸。
+                    <br>
+                    皇马2009年夏天得到巅峰C罗，都过了五年才拿到欧冠冠军。
+                    <br><br>
+                    </p>
+                <img src="https://q3.itc.cn/images01/20240721/2a0c90e2be6841b7be1f7b313c67660d.jpeg">
+                <p>巴萨今夏当然不会只签一个尼科。
+                    <br>
+                    据西班牙媒体的消息，巴萨今夏还会签下奥尔莫。奥尔莫与莱比锡6000万欧元的解约金到期，巴萨还没有采取行动。不过巴萨也可能以低于6000万欧元的价格得到奥尔莫。
+                    <br>
+                    如果今夏引进了尼科、奥尔莫，那么，弗里克执教的巴萨，新赛季可能排出这样的首发。<br><br></p>
+                <img src="https://q5.itc.cn/images01/20240721/f9c75b0f990240d88ed04c9e541bf28b.jpeg">
+                <p>特尔斯特根/克里斯滕森、库巴西、阿劳霍、孔德/加维、奥尔莫、佩德里/尼科、莱万、亚马尔。
+                    <br>
+                    中场还有京多安，弗兰基·德容两大猛人，若引进了奥尔莫，佩德里、加维也伤愈了，33岁的京多安可以作为轮换人选。加盟巴萨后一直没什么进步的弗兰基·德容只能打替补，最好的结果当然是今夏以可观的价格套现，27岁荷兰中场目前的身价仍高达7000万欧元。
+                    <br>
+                    锋线费兰·托雷斯、拉菲尼亚、法蒂、罗克这四个，只能打替补了，要卖，除了拉菲尼亚，估计也卖不出什么价格。
+                    <br>
+                    这样的一套首发，是可以与姆巴佩领衔的皇马抗衡的。这里的抗衡，并不仅指直接对话，而是西甲、欧冠、国王杯等赛事冠军奖杯的争夺。C罗时代皇马称雄欧冠赛场的那些年，“国家德比”经常处于劣势，但不影响他们称霸欧冠赛场。哈维执教的巴萨，与皇马的直接对话一度还处于上风，结果却是经历了一个四大皆空的赛季后黯然离去。</p>
+            </div>
+        </div>
+        <div class="right">
+          
+            <div class="list">
+                <div class="list_head"><h2>热门精选</h2><hr></div>
+                <div><img src="https://q5.itc.cn/images01/20240721/d8a1bf92a3804693a0a6b1ebaff5bd35.jpeg" width="100%" id="big_pic"></div>
+            </div>
+            <div class="pics">
+                <div class="pics_content">
+                    <div class="pic2"><img src="https://q5.itc.cn/q_70/images01/20240719/c4a3214a64fe4e898c0ddf698b55a8ec.jpeg" class="small_img" onclick="changePic(this)"></div>
+                    <div class="pic2_content_text">身价涨幅榜：西班牙6人共涨7000万欧 居莱尔卡拉菲奥里蹿升 </div>
+                </div>
+                <div class="pics_content">
+                   <div class="pic2"><img src="https://q3.itc.cn/q_70/images01/20240719/cf99bc6d89c24d6fae53cd10d6e22c98.png" class="small_img" onclick="changePic(this)"></div>
+                   <div class="pic2_content_text">官方：曼联宣布签下18岁里尔中卫约罗 合同期至2029年6月 </div>
+               </div>
+               <div class="pics_content">
+                 <div class="pic2"><img src="https://q6.itc.cn/q_70/images01/20240718/1055db82e8d0432980acc1458cbefb31.jpeg" class="small_img" onclick="changePic(this)"></div>
+                 <div class="pic2_content_text">夏窗转会榜：1.8亿欧姆巴佩0价最轰动 标王5300万欧拜仁制造 </div>
+              </div> 
+              <div class="pics_content">
+                 <div class="pic2"><img src="https://q3.itc.cn/q_70/images01/20240716/1824c465156b4623a10da9a508e21ce5.jpeg" class="small_img" onclick="changePic(this)"></div>
+                 <div class="pic2_content_text">2024欧洲杯最佳阵容：西班牙冠军阵容打底 英荷法德各献良才</div>
+              </div>
+             
+            </div>
+            <div class="text">
+                <div class="list_head"><h2>24小时热点</h2><hr></div>
+                <div class="text_content">
+                   <div class="text_content_section">
+                      <span class="first">1</span>
+                      <span class="pic3"><img src="https://q7.itc.cn/images01/20240719/b666d6c02f2d4b209815c08e8a683567.jpeg"></span>
+                      <span class="article"><p><h5>7场0球0助，摇变欧洲杯水货！24岁瓜帅爱将笑麻了</h5><p><font class="font2">侃球部落· 昨天10:36· 1.2万阅读</font></p></span>
+                   </div>
+                   <div class="text_content_section">
+                    <span class="second">2</span>
+                    <span class="pic3"><img src="https://q0.itc.cn/images01/20240721/093e5ee1348b4eca9f76fabd5e7a85a9.jpeg"></span>
+                    <span class="article"><p><h5>阿根廷大赛三连可否媲美当年的西班牙？</h5><p><font class="font2">牢大体育· 昨天10:36· 2.4万阅读</font></p></span>
+                 </div>
+                 <div class="text_content_section">
+                    <span class="third">3</span>
+                    <span class="pic3"><img src="https://q4.itc.cn/images01/20240721/3b5f8b00b5304364aeebef836accabe3.png"></span>
+                    <span class="article"><p><h5>迈阿密为梅西举办45冠仪式,梅西穿保护靴登场,接受全场球迷顶礼膜拜 </h5><p><font class="font2">818体育· 今天10:36· 1.2万阅读</font></p></span>
+                 </div>
+                 <div class="text_content_section">
+                    <span class="norm"></span>
+                    <span class="pic3"><img src="https://q6.itc.cn/images01/20240720/1d99db1a70f04a5c8e4735c3d82fc5c3.jpeg"></span>
+                    <span class="article"><p><h5>再见奥运会！再见世界杯？五星巴西沉沦，阿根廷在南美一家独大 </h5><p><font class="font2">阿伟罗体育· 昨天11:36· 7万阅读</font></p></span>
+                 </div>
+                </div>    
+        </div>
+    </div>
+    <div class="bottem">
+        <div class="bottem_content">
+            <p>支付中心 - 网站招聘 - 广告服务 - 联系方式 - About us - 公司介绍 - 隐私政策</br>Copyright © 2024  All Rights Reserved. xx公司 版权所有</p>
+         </div>
+      </div>  
+</body>
+
+</html>

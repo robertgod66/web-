@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足球新闻首页</title>
+</head>
+<style>  
+   body{
+    background-image: url(https://img1.qunarzz.com/travel/d8/1612/73/5fc85e995c6bf2b5.jpg);
+    background-size:cover;
+  }  
+    
+    *{margin:0; padding: 0;font-family:"STSong";}
+    .menu{width: 100%;background-color: darkblue;}
+    hr{border: none;height: 3px;background-color: black;}
+    .hr1{border: none;height: 1px;background-color: rgb(121, 116, 116);}
+    a:link{text-decoration: none; color:white}
+    a:visited{color:white;}
+    .a1:link{text-decoration: none; color:rgb(0, 0, 0)}
+    .a1:visited{color:rgb(0, 0, 0);}
+    .banner{width:80%;
+        height: 320px;
+       margin: 0 auto;}
+    .Meu_top{
+        width:100%;
+        height: 40px;
+        background-color: crimson;
+        font-size:18px ;
+        color: white;
+        border-bottom: 2px orange solid;
+    }
+    .top_content{
+        width: 80%;
+        height: 40px;
+        margin: 0 auto;
+    }
+    .top_left{
+        width:300px;
+        height: 40px;
+        float: left;
+        line-height: 40px;
+        text-align: center;
+    }
+    .top_right{
+        width:240px;
+        height: 40px;
+        float: right;
+        display: flex;
+        justify-content: space-between;
+    }
+    .top_right span{
+        width:80px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+    }
+    .Meu_content{
+        width:700px ;
+        margin-left: 20%;
+        height: 50px;
+        font-size:18px ;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+    .name{
+        width: 60px;
+        line-height: 50px;
+        text-align: center;
+        cursor:pointer
+    }
+
+    .middle{
+        width:80%;
+        height: 2140px;
+       margin: 0 auto;
+    }
+    .middle div{
+        border: 2px whitesmoke solid;
+        float: left;
+    }
+    .content{
+        width:70%;
+        height: 2040px;
+        background-color: whitesmoke;
+    }
+    #right{
+        width:29%;
+        text-align:center;
+        background-color: whitesmoke;
+    }
+    #left{
+        width:49%;
+        overflow: hidden;
+        background-color: whitesmoke;
+    }
+    #mid{
+        width:49%;
+        overflow: hidden;
+    }
+    .news_content{width:100%;clear:both}
+    li{
+        font-size: 15px;
+        height:30px;
+        line-height: 30px;
+        overflow: hidden;
+    }
+    .heat{
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .pic1{
+        width:360px; 
+        vertical-align: middle;
+    }
+    .pics{width:100%; height:266px;}
+    .pics_content{width:48%; }
+    .pic2{width: 100%;height: 90px;overflow: hidden;}
+    .pics_content img{width:100%; }
+    .pics_content div{width: 100%;font-size: smaller;}
+    .pic2_content_text{height: 30px;overflow: hidden;}
+     p font{font-size: smaller;color: lightgray;}
+    .times{width:100%;height: 1150px;}
+    .times_context{width: 100%;}
+    .blank{ width:20%;}
+    .blank_content{width: 100%;height:40px;line-height: 40px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;background-color: lightgray;}
+    .text{width:79%}
+    .text_content{width:100%}
+    .text_content_section{width:100%;height:150px;}
+    .text_content_section img{height: 150px;width: 230px;}
+    .text_content_section div{width:65%;height: 150px;float: right;}
+    h1{border: 0;}
+    .list{width:100%}
+    .list_head{height: 50px;width: 100%;line-height: 50px;text-align: justify;}
+    .list_banner{width: 100%;}
+    .tab{width:100% ;display: flex;justify-content: space-between;}
+    .tab span{width:50px;font-size: 16px;text-align: center;font-style: oblique;cursor:pointer}
+    .tab_active{border-top:2px red solid;}
+    #off1,#off2{display: none;}
+    .list_banner_content{height: 40px;width: 80%;display: flex;justify-content: space-between;position:relative;top:0;bottom: 0;left: 70px; right: 0;}
+    .list_banner_content1{height: 40px;width: 95%;display: flex;justify-content: space-between;background-color: white;}
+    .list_banner_content span,.list_banner_content1 span{width: 90px;height: 40px;line-height: 40px;text-align: left; font-size: 18px;overflow: hidden;}
+    .list_banner_content1 span{background-color: white;}
+    .list_banner_content span font{font-size: smaller; color: gray;}
+    .rank{width: 50px;height: 40px;clear: both;}
+    .rank div{width: 25px;height: 25px;text-align: center;line-height: 25px;position: relative;left:20px ;top:5px ;bottom: 0;right:0;}
+    .first{background-color: red; color: white;}
+    .second{background-color: orange;color: white;}
+    .third{background-color: burlywood;color: white;}
+    .norm{background-color: lightgray;color:gray;}
+    .series,.hotgoods{width:100%;border: 0;overflow: hidden;}
+    .hotgoods img{width:290px;height: 190px; margin: 3px;padding: 3px;}
+    .pic_bg img{width:100%;height: 240px; }
+    ul,li{list-style: none;}
+    .pic_bg{width: 100%; margin: 0 auto; text-align: center;}
+    .focusBox{position: absolute; width: 60px; top:640px; left:79%; margin-left: -30px; height: 30px; }
+    .focusBox li{float: left;margin-right: 5px; width: 8px; height: 8px; 
+            border-radius: 5px; background-color: gray; cursor:pointer}
+     li.cur{background-color:orange}
+    .bottem{width: 100%;height: 90px;background-color:dimgray}
+    .bottem_content{width: 60%;height:90px;margin: auto auto;text-align: center;line-height: 45px;background-color:dimgray;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: white;font-size: smaller;}
+</style>
+<body>
+  <div class="menu">
+    <div class="Meu_top">
+      <div class="top_content">  
+       <div class="top_left">Hello!|欢 迎 来 到 足 球 新 闻 网 站 ！</div>
+       <div class="top_right">
+        <span><a href="demologin2.html" target="_blank">后台</a></span><span><a href="demologin.html" target="_blank">登录</a></span><span><a href="demoregister.html" target="_blank">注册</a></span>
+       </div>
+    </div>
+    </div>
+    <div class="Meu_content">
+        <span class='name'><a href="D:\vscode1\实训\zuoye\England.html" ><strong>英超</strong></a></span>
+        <span class='name'><strong>西甲</strong></span>
+        <span class='name'><strong>法甲</strong></span>
+        <span class='name'><strong>德甲</strong></span>
+        <span class='name'><strong>意甲</strong></span>
+        <span class='name'><strong>欧冠</strong></span>
+        <span class='name'><strong>国家队</strong></span>
+     <select>
+        <option>梅西</option>
+        <option>C罗</option>
+        <option>姆巴佩</option>
+     </select>
+     </div>
+  </div>
+  <div class="banner"><img src="D:\vscode1\实训\zuoye\images\列强.png" width="100%"><img src="D:\vscode1\实训\zuoye\images\国际比赛.png" width="100%"></div>
+ 
+  <div class="middle">
+    <div class="content">
+       <div id="left">
+        <div class="news_content">
+            <ul>
+            <li class="heat"><strong>HERE WE GO!曼联5000万欧+浮动签18岁中卫 从皇马口中夺食</strong></li>
+            <li>与远藤航同队？曝利物浦6500万欧签久保建英 年薪1500万欧</li>
+            <li>钱太少！曝马竞2000万镑求购加拉格尔 切尔西已拒绝</li>
+            <li>否认离队传闻！安东尼经纪人：他只专注于曼联 他想留下</li>
+            <li>滕哈格表态今夏不卖麦克托米奈 曼联想再签一名防守型中场</li>
+            <li>2700万镑！英媒：曼联被要求将出售格林伍德的收入捐给足协</li>
+           </ul>
+           <br/><br/>
+           <ul>
+            <li class="heat"><strong><a href="D:\vscode1\实训\zuoye\news.html" class="a1" target="_blank">巴萨如何与姆巴佩皇马抗衡？得尼科、奥尔莫后，这套首发可以 !</a></strong></li>
+            <li>你来定价！亚马尔身价过亿成定局 1亿欧到1.3亿欧哪个合理？</li>
+            <li>巴萨官宣亚马尔新赛季身背19号 穿梅西穿过的球衣走他走过的路</li>
+            <li>官方：要求梅西和足协向公众道歉的阿根廷体育副部长遭解职</li>
+            <li>曝巴萨与尼科-威廉姆斯经纪人会面谈妥合同 竟还想再购奥尔莫？</li>
+            <li> 夏窗转会榜:1.8亿欧姆巴佩0价最轰动 标王5300万欧拜仁</li>
+           </ul>
+        </div>
+     </div>
+     <div id="mid">
+        <div class="news_content">
+            <ul>
+            <li class="heat"><strong>姆巴佩母亲直言：巴黎若欠薪或诉诸法律行动 这场经历如同一次分手</strong></li>
+            <li>黄喜灿遭遇种族歧视风波 韩足协要求加强制裁 狼队英超各方回应</li>
+            <li>波斯特科格鲁：三狮军团帅位候选人？我心系热刺</li>
+            <li>欧洲杯官方最佳阵容:西班牙6人入选 穆西亚拉沃克在列</li>
+            <li>切尔西更衣室裂痕加深：恩佐道歉难平众怒 杰克逊当和事佬于事无补</li>
+            <li>续写12年传奇!官方确认:39岁莫德里奇与皇马续约至2025</li>
+            </ul>
+            <br/><br/>
+            <ul>
+             <li class="heat"><strong>名宿推荐！曝马塔建议曼联签奥尔莫 2024欧洲杯金靴</strong></li>
+             <li>转投意甲升班马！曝瓦拉内将加盟科莫 与法布雷加斯合作</li>
+             <li>曼联取季前赛首胜！滕哈格怒赞新管理层：转会运作很出色</li>
+             <li>奥纳纳盛赞约罗：想当曼联球员必须有实力 他已展示这一点</li>
+             <li>不想拖了？曝巴萨坚信将在10天内签下尼科-威廉姆斯</li>
+             <li>为争冠补强！阿森纳即将签下卡拉菲奥里 转会费总价4500万</li>
+            </ul>
+        </div>    
+      </div>
+      <div class="times">
+        <div class="list_head"><h1>国际足球动态</h1></div>
+        <div class="times_context">
+          <div class="blank">
+             <script>
+                 var names=["曼联","曼城","利物浦","切尔西","阿森纳","利物浦","皇马","巴萨","国米","米兰","尤文","拜仁","巴黎","梅西","C罗"]
+                 for(var i=0;i<names.length;i++){
+                   var info="<div class='blank_content'>&nbsp&nbsp&nbsp|"+names[i]+"</div>"
+                   document.write(info)
+                 }
+             </script>
+          </div>
+          <div class="text">
+             <div class="text_content">
+                <div class="text_content_section">
+                  <img src="https://q7.itc.cn/images01/20240720/4f811a0a7613448386e8252c2ef87701.png"><div><p><h3>CCTV5见证！C罗无法再踢2026世界杯 原因有二</h3><br/><font size="3px" color="gray">C罗是本届欧洲杯表现最差的超级球星，虽然在小组赛首场对阵捷克时表现...</font></p><br/><p><font>智道足球· 昨天23:41· 5007阅读</font></p></div>
+                  <hr class="hr1">
+                </div>
+               
+                <div class="text_content_section">
+                    <img src="https://q3.itc.cn/images01/20240722/22a88c2b9f2142bfbd9a05b2c36695f4.jpeg"><div><p><h3>今日意甲新闻汇：米兰接近敲定塞后防大将，国米追逐阿森纳屏障</h3><br/><font size="3px" color="gray">米兰和国米分别对帕夫洛维奇和基维奥尔的报价接近2000万欧和1200万...</font></p><br/><p><font>力帆足球· 昨天23:45· 5947阅读</font></p></div>
+                    <hr class="hr1">
+                </div>
+                
+                <div class="text_content_section">
+                    <img src="https://q0.itc.cn/images01/20240722/7060fcfbb1ef40779536c511041212dc.png"><div><p><h3>6500万欧转会费！利物浦官宣亚洲标王！接班萨拉赫，球迷嘘声一片 </h3><br/><font size="3px" color="gray">利物浦作为英超顶级豪门，这个夏天在转会市场上也是让大家看到了他们...</font></p><br/><p><font>凤梨足球· 13:41· 8678阅读</font></p></div>
+                    <hr class="hr1">
+                </div>
+              
+                <div class="text_content_section">
+                    <img src="https://q8.itc.cn/images01/20240722/6868aeaefe0c47da9cbac9e8c2f0aed9.jpeg"><div><p><h3>皇马巨星维尼修斯假期将卡马文加拐到巴西踢球</h3><br/><font size="3px" color="gray">皇马球星在欧洲杯和美洲杯结束后，度假放松。维尼修斯、卡马文加晒度...</font></p><br/><p><font>荒野足球· 昨天23:01· 9807阅读</font></p></div>
+                    <hr class="hr1">
+                </div>
+                <div class="text_content_section">
+                    <img src="https://q7.itc.cn/images01/20240722/8fe806440019482988410cb5602757af.jpeg"><div><p><h3>京多安：我曾为克洛普踢球 自从加入瓜迪奥拉的曼城 才真正懂了足球  </h3><br/><font size="3px" color="gray">在来到曼城之后，京多安成长为了世界顶级球星，他的后插上能力在足坛无出其右...</font></p><br/><p><font>凤梨足球· 13:41· 8678阅读</font></p></div>
+                    <hr class="hr1">
+                </div>
+              
+                <div class="text_content_section">
+                    <img src="https://q6.itc.cn/q_70/images03/20240722/a81c54dc536a4d9f89698782d38b4aa6.jpeg"><div><p><h3>罗马诺：科莫有意阿图尔，已联系尤文询问交易条件 </h3><br/><font size="3px" color="gray">据知名记者罗马诺的消息，科莫有意引进尤文中场阿图尔，已联系尤文询问交易条件...</font></p><br/><p><font>荒野足球· 昨天23:01· 9807阅读</font></p></div>
+                    <hr class="hr1">
+                </div>
+                <div class="text_content_section">
+                    <img src="https://q7.itc.cn/images01/20240720/4f811a0a7613448386e8252c2ef87701.png"><div><p><h3>CCTV5见证！C罗无法再踢2026世界杯 原因有二</h3><br/><font size="3px" color="gray">C罗是本届欧洲杯表现最差的超级球星，虽然在小组赛首场对阵捷克时表现...</font></p><br/><p><font>智道足球· 昨天23:41· 5007阅读</font></p></div>
+                    <hr class="hr1">
+                  </div>
+             </div>
+             
+             
+          </div>
+          
+        </div>
+        
+       </div>
+       <div class="series">
+       
+        <div class="list_head"><h1>精彩集锦</h1><hr></div>
+        <div class="hotgoods"></div>
+        <script>
+
+            function showRandomHot(){
+                var img = '';
+                var indexList = new Array();
+                for(var i=0; i<6; i++){
+                    var index = Math.floor(Math.random()*6+1);
+                    if(indexList.includes(index)){ 
+                        i--;
+                        continue;
+                    }
+                    indexList.push(index);  
+                    imgSrc = 'images/s'+ index +'.jpg';
+                    img = img + "<img src='"+ imgSrc +"''>";
+                }
+    
+                document.getElementsByClassName('hotgoods')[0].innerHTML = img;
+            }
+    
+            window.setInterval(showRandomHot, 2000);
+            
+        </script>
+        
+
+     </div>
+    </div>
+     <div id="right">
+        <div class="pic_bg">
+            <img src="images/lunbo1.png" id="pic">
+            <ul class="focusBox">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <script>
+            var index = 2;
+            function changePic(){
+                if(index == 4){   
+                    index = 1;
+                }
+                var addr = "images/lunbo"+ index +".png";  
+                var picEle = document.getElementById('pic');  
+                picEle.src = addr;  
+                var liList = document.getElementsByClassName('focusBox')[0].getElementsByTagName('li');
+                for(var i=0;i<liList.length; i++){
+                    liList[i].className = '';
+                }
+                liList[index-1].className = 'cur';
+                index++;  
+            }
+    
+            window.setInterval(changePic, 1000);
+    
+        </script>
+       <div class="pics">
+           <div class="pics_content">
+               <div class="pic2"><img src="https://q5.itc.cn/q_70/images01/20240719/c4a3214a64fe4e898c0ddf698b55a8ec.jpeg"></div>
+               <div class="pic2_content_text">身价涨幅榜：西班牙6人共涨7000万欧 居莱尔卡拉菲奥里蹿升 </div>
+           </div>
+           <div class="pics_content">
+              <div class="pic2"><img src="https://q3.itc.cn/q_70/images01/20240719/cf99bc6d89c24d6fae53cd10d6e22c98.png"></div>
+              <div class="pic2_content_text">官方：曼联宣布签下18岁里尔中卫约罗 合同期至2029年6月 </div>
+          </div>
+          <div class="pics_content">
+            <div class="pic2"><img src="https://q6.itc.cn/q_70/images01/20240718/1055db82e8d0432980acc1458cbefb31.jpeg"></div>
+            <div class="pic2_content_text">夏窗转会榜：1.8亿欧姆巴佩0价最轰动 标王5300万欧拜仁制造 </div>
+         </div> 
+         <div class="pics_content">
+            <div class="pic2"><img src="https://q3.itc.cn/q_70/images01/20240716/1824c465156b4623a10da9a508e21ce5.jpeg"></div>
+            <div class="pic2_content_text">2024欧洲杯最佳阵容：西班牙冠军阵容打底 英荷法德各献良才</div>
+         </div>  
+       </div>
+       <div class="list">
+        <div class="list_head"><h2>积分榜</h2><hr></div>
+        <div class="tab">
+            <span class="tab_active" onclick="changeTab1(this)">英超</span>
+            <span onclick="changeTab1(this);">西甲</span>
+            <span onclick="changeTab1(this);">德甲</span>
+            <span onclick="changeTab1(this);">法甲</span>
+            <span onclick="changeTab1(this);">意甲</span>
+        </div> 
+        <div class="list_banner" id="on1">
+          <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球队</font></span><span><font>胜/平/负</font></span><span><font>积分</font></span></div>
+          <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">曼城</span><span>27/7/3</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;91</span></div>
+          <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">阿森纳</span><span>28/5/5</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;89</span></div>
+          <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">利物浦</span><span>24/10/4</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;82</span></div>
+          <div class="list_banner_content1"><span class="rank"><div class="norm">4</div></span><span class="list_main">阿斯顿维拉</span><span>20/8/10</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;68</span></div>
+          
+         </div>
+         <div class="list_banner" id="off1">
+            <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球队</font></span><span><font>胜/平/负</font></span><span><font>积分</font></span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">皇家马德里</span><span>29/8/1</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;95</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">巴塞罗那</span><span>26/7/5</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;85</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">赫罗纳</span><span>25/6/7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;81</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="norm">4</div></span><span class="list_main">马德里竞技</span><span>24/4/10</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;76</span></div>
+            
+           </div>
+           <div class="list_banner" id="off1">
+            <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球队</font></span><span><font>胜/平/负</font></span><span><font>积分</font></span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">勒沃库森</span><span>28/6/0</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;90</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">斯图加特</span><span>23/4/7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;73</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">拜仁慕尼黑</span><span>23/3/8</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;72</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="norm">4</div></span><span class="list_main">莱比锡RB</span><span>19/8/7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;65</span></div>
+            
+           </div>
+           <div class="list_banner" id="off1">
+            <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球队</font></span><span><font>胜/平/负</font></span><span><font>积分</font></span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">巴黎圣日尔曼</span><span>22/10/2</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;76</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">摩纳哥</span><span>20/7/7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;67</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">布雷斯特</span><span>17/10/7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;61</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="norm">4</div></span><span class="list_main">里尔</span><span>16/11/7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;59</span></div>
+            
+           </div>
+           <div class="list_banner" id="off1">
+            <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球队</font></span><span><font>胜/平/负</font></span><span><font>积分</font></span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">国际米兰</span><span>29/7/2</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;91</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">AC米兰</span><span>22/9/7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;89</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">尤文图斯</span><span>19/14/5</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;82</span></div>
+            <div class="list_banner_content1"><span class="rank"><div class="norm">4</div></span><span class="list_main">亚特兰大</span><span>21/6/11</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;68</span></div>
+            
+           </div>
+           <script>
+             function changeTab1(event){
+            var index = 1;
+            var tab = document.getElementsByClassName('tab')[0];
+            var tab_list = tab.getElementsByTagName('span');
+            for(var i=0;i<tab_list.length;i++){
+                tab_list[i].className = '';
+                if(event == tab_list[i]){
+                    index = i;   
+                }
+            }
+            event.className = 'tab_active';
+
+            var list = document.getElementsByClassName('list')[0];
+            
+            var tab_contents = list.getElementsByClassName('list_banner');  
+            for(var i=0;i<tab_contents.length;i++){
+                if(index != i){
+                    tab_contents[i].id = 'off1';
+                }else{
+                    tab_contents[i].id = 'on1';
+                }
+            }
+          }
+           </script>
+       </div>
+         <div class="list">
+            <div class="list_head"><h2>射手榜</h2><hr></div>
+            <div class="tab">
+                <span class="tab_active" onclick="changeTab2(this)">英超</span>
+                <span onclick="changeTab2(this);">西甲</span>
+                <span onclick="changeTab2(this);">德甲</span>
+                <span onclick="changeTab2(this);">法甲</span>
+                <span onclick="changeTab2(this);">意甲</span>
+            </div> 
+            <div class="list_banner" id="on2">
+              <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球员</font></span><span><font>球队</font></span><span><font>进球</font></span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">哈兰德</span><span>曼城</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27</span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">帕尔默</span><span>切尔西</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22</span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">伊萨克</span><span>纽卡斯尔</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21</span></div>
+              
+             </div>
+             <div class="list_banner" id="off2">
+                <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球员</font></span><span><font>球队</font></span><span><font>进球</font></span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">多夫比克</span><span>赫罗纳</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24</span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">索罗斯</span><span>比利亚雷亚尔</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23</span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">莱万多夫斯基</span><span>巴塞罗那</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19</span></div>
+                
+               </div>
+               <div class="list_banner" id="off2">
+                <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球员</font></span><span><font>球队</font></span><span><font>进球</font></span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">哈里凯恩</span><span>拜仁</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36</span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">吉达西</span><span>斯图加特</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28</span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">奥彭达</span><span>莱比锡RB</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24</span></div>
+                
+               </div>
+               <div class="list_banner" id="off2">
+                <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球员</font></span><span><font>球队</font></span><span><font>进球</font></span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">姆巴佩</span><span>巴黎圣日尔曼</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27</span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">戴维</span><span>里尔</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19</span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">拉卡泽特</span><span>里昂</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19</span></div>
+                
+               </div>
+               <div class="list_banner" id="off2">
+                <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球员</font></span><span><font>球队</font></span><span><font>进球</font></span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">劳塔罗</span><span>国际米兰</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24</span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">弗拉霍维奇</span><span>尤文图斯</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16</span></div>
+                <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">吉鲁</span><span>AC米兰</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15</span></div>
+                
+               </div>
+               <script>
+                function changeTab2(event){
+               var index = 1;
+               var tab = document.getElementsByClassName('tab')[1];
+               var tab_list = tab.getElementsByTagName('span');
+               for(var i=0;i<tab_list.length;i++){
+                   tab_list[i].className = '';
+                   if(event == tab_list[i]){
+                       index = i;   
+                   }
+               }
+               event.className = 'tab_active';
+   
+               var list = document.getElementsByClassName('list')[1];
+               
+               var tab_contents = list.getElementsByClassName('list_banner');  
+               for(var i=0;i<tab_contents.length;i++){
+                   if(index != i){
+                       tab_contents[i].id = 'off2';
+                   }else{
+                       tab_contents[i].id = 'on2';
+                   }
+               }
+             }
+              </script>
+        </div>
+        
+        <div class="list">
+            <div class="list_head"><h2>欧冠晋级图</h2><hr></div>
+           <img src="https://q8.itc.cn/c_fill,w_680,h_1168/images03/20240721/989d3dca363a49a1b13dbc7d5fd1b9ef.png" width="100%">
+        </div>
+        <div class="list">
+            <div class="list_head"><h2>欧冠射手榜</h2><hr></div>
+            <div class="list_banner">
+              <div class="list_banner_content"><span class="list_main"><font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;球员</font></span><span><font>球队</font></span><span><font>进球</font></span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="first">1</div></span><span class="list_main">凯恩</span><span>拜仁慕尼黑</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8</span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="second">2</div></span><span class="list_main">姆巴佩</span><span>巴黎圣日尔曼</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8</span></div>
+              <div class="list_banner_content1"><span class="rank"><div class="third">3</div></span><span class="list_main">格列兹曼</span><span>马德里竞技</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6</span></div>
+              
+             </div>
+        </div>     
+   
+ 
+     </div>
+  </div>
+  <div class="bottem">
+    <div class="bottem_content">
+        <p>支付中心 - 网站招聘 - 广告服务 - 联系方式 - About us - 公司介绍 - 隐私政策</br>Copyright © 2024  All Rights Reserved. xx公司 版权所有</p>
+     </div>
+  </div>  
+</body>
+</html>
